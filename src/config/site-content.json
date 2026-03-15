@@ -1,8 +1,8 @@
 {
 	"meta": {
-		"title": "[贰狗日志]",
-		"description": "任贰狗的个人博客，发布一些日常收集来的软件、游戏，还有一些乱七八糟瞎折腾的研究笔记教程之类的。",
-		"username": "Ciao"
+		"title": "冷yueの个人站点",
+		"description": "冷yue的个人站点",
+		"username": "冷yue"
 	},
 	"theme": {
 		"colorBrand": "#35bfab",
@@ -40,26 +40,26 @@
 		{
 			"id": "github",
 			"type": "github",
-			"value": "https://github.com/RT622",
+			"value": "https://github.com/leng-yue-cren",
 			"label": "Github",
 			"order": 3
 		},
 		{
 			"id": "juejin",
 			"type": "qq",
-			"value": "/images/social-buttons/7f509f0a4c020a31.png",
+			"value": "208427957",
 			"label": "稀土掘金",
 			"order": 2
 		},
 		{
 			"id": "email",
 			"type": "email",
-			"value": "Twodog@88.com",
+			"value": "208427957@qq.com",
 			"label": "",
 			"order": 1
 		}
 	],
-	"clockShowSeconds": false,
+	"clockShowSeconds": true,
 	"summaryInContent": false,
 	"isCachePem": true,
 	"hideEditButton": false,

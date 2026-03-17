@@ -40,8 +40,8 @@ const list = [
 	{
 		icon: AboutOutlineSVG,
 		iconActive: AboutFilledSVG,
-		label: '人物',
-		href: '/Chara'
+		label: '关于',
+		href: '/About'
 	},
 	{
 		icon: ShareOutlineSVG,

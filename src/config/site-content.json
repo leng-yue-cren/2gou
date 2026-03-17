@@ -5,7 +5,7 @@
 		"username": "冷yue"
 	},
 	"theme": {
-		"colorBrand": "#35bfab",
+		"colorBrand": "#65743E",
 		"colorPrimary": "#334f52",
 		"colorSecondary": "#7b888e",
 		"colorBrandSecondary": "#1fc9e7",
@@ -15,12 +15,14 @@
 		"colorArticle": "#ffffffcc"
 	},
 	"backgroundColors": [
-		"#EDDD62",
-		"#9EE7D1",
-		"#84D68A",
-		"#EDDD62",
-		"#88E6E5",
-		"#a7f3d0"
+		"#49149C",
+		"#591BF0",
+		"#2CCECE",
+		"#B884E5",
+		"#5EC575",
+		"#FCB213",
+		"#141FBA",
+		"#83D6D8"
 	],
 	"artImages": [
 		{

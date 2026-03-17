@@ -67,8 +67,11 @@
 	"currentHatIndex": 3,
 	"hatFlipped": false,
 	"enableChristmas": false,
-	"enablePasswordAccess": false,
-	"passwordAccessCategories": [],
+	"enablePasswordAccess": true,
+	"passwordAccessCategories": [
+		"Soft",
+		"Games"
+	],
 	"passwordAccessPassword": "110110",
 	"beian": {
 		"text": "",

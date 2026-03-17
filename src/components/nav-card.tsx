@@ -53,7 +53,7 @@ const list = [
 		icon: AboutOutlineSVG,
 		iconActive: AboutFilledSVG,
 		label: '关于',
-		href: '/About'
+		href: '/about'
 	}
 ]
 

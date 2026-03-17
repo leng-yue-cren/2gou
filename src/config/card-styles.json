@@ -1,18 +1,18 @@
 {
 	"artCard": {
-		"width": 638,
-		"height": 415,
+		"width": 634,
+		"height": 659,
 		"order": 3,
-		"offsetX": -360,
-		"offsetY": -207,
+		"offsetX": -355,
+		"offsetY": -293,
 		"enabled": true
 	},
 	"hiCard": {
 		"width": 456,
 		"height": 324,
 		"order": 1,
-		"offsetX": -270,
-		"offsetY": -161,
+		"offsetX": -273,
+		"offsetY": -214,
 		"enabled": true
 	},
 	"clockCard": {
@@ -45,8 +45,8 @@
 		"width": 295,
 		"height": 57,
 		"order": 6,
-		"offsetX": -400,
-		"offsetY": -272,
+		"offsetX": -377,
+		"offsetY": -279,
 		"enabled": true
 	},
 	"shareCard": {
@@ -62,7 +62,7 @@
 		"height": 152,
 		"order": 8,
 		"offsetX": -258,
-		"offsetY": 217,
+		"offsetY": 192,
 		"enabled": true
 	},
 	"writeButtons": {
@@ -70,7 +70,7 @@
 		"width": 180,
 		"order": 8,
 		"offsetX": 88,
-		"offsetY": -259,
+		"offsetY": -277,
 		"enabled": true
 	},
 	"navCard": {

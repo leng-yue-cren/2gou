@@ -38,12 +38,6 @@ const list = [
 		href: '/Games'
 	},
 	{
-		icon: AboutOutlineSVG,
-		iconActive: AboutFilledSVG,
-		label: '关于',
-		href: '/About'
-	},
-	{
 		icon: ShareOutlineSVG,
 		iconActive: ShareFilledSVG,
 		label: '笔记',
@@ -54,8 +48,13 @@ const list = [
 		iconActive: ScrollFilledSVG,
 		label: '归档',
 		href: '/blog'
+	},
+	{
+		icon: AboutOutlineSVG,
+		iconActive: AboutFilledSVG,
+		label: '关于',
+		href: '/About'
 	}
-
 ]
 
 const extraSize = 8

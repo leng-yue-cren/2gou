@@ -28,31 +28,31 @@ const list = [
 	{
 		icon: WebsiteOutlineSVG,
 		iconActive: WebsiteFilledSVG,
-		label: '宝藏软件',
+		label: '软件',
 		href: '/Soft'
 	},
 	{
 		icon: ProjectsOutlineSVG,
 		iconActive: ProjectsFilledSVG,
-		label: '精品游戏',
+		label: '游戏',
 		href: '/Games'
 	},
 	{
 		icon: AboutOutlineSVG,
 		iconActive: AboutFilledSVG,
-		label: '人物卡片',
+		label: '人物',
 		href: '/Chara'
 	},
 	{
 		icon: ShareOutlineSVG,
 		iconActive: ShareFilledSVG,
-		label: '折腾笔记',
+		label: '笔记',
 		href: '/Notes'
 	},
 	{
 		icon: ScrollOutlineSVG,
 		iconActive: ScrollFilledSVG,
-		label: '文章归档',
+		label: '归档',
 		href: '/blog'
 	}
 
@@ -142,7 +142,7 @@ export default function NavCard() {
 					<Link className='flex items-center gap-3' href='/'>
 						<Image src='/images/avatar.png' alt='avatar' width={40} height={40} style={{ boxShadow: ' 0 12px 20px -5px #E2D9CE' }} className='rounded-full' />
 						{form === 'full' && <span className='font-averia mt-1 text-2xl leading-none font-medium'>{siteContent.meta.title}</span>}
-						{form === 'full' && <span className='text-brand mt-2 text-xs font-medium'>(混乱中)</span>}
+						{form === 'full' && <span className='text-brand mt-2 text-xs font-medium'>(加载ing)</span>}
 					</Link>
 
 					{(form === 'full' || form === 'icons') && (

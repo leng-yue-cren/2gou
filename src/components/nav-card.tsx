@@ -41,7 +41,7 @@ const list = [
 		icon: ShareOutlineSVG,
 		iconActive: ShareFilledSVG,
 		label: '笔记',
-		href: '/Notes'
+		href: '/share'
 	},
 	{
 		icon: ScrollOutlineSVG,

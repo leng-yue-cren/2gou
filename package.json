@@ -33,7 +33,7 @@
     "tailwindcss-animate": "^1.0.7",
     "ts-debounce": "^4.0.0",
     "zustand": "^5.0.8",
-    "@vercel/kv": "latest"
+    "@upstash/redis": "latest"
   },
   "devDependencies": {
     "@svgr/webpack": "^8.1.0",

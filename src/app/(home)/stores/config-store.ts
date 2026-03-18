@@ -20,21 +20,29 @@ interface ConfigStore {
 
 // 从localStorage加载配置
 const loadFromLocalStorage = () => {
-	try {
-		const savedSiteContent = localStorage.getItem('siteContent')
-		const savedCardStyles = localStorage.getItem('cardStyles')
-		
-		return {
-			siteContent: savedSiteContent ? JSON.parse(savedSiteContent) : { ...siteContent },
-			cardStyles: savedCardStyles ? JSON.parse(savedCardStyles) : { ...cardStyles }
-		}
-	} catch (error) {
-		console.error('Failed to load config from localStorage:', error)
-		return {
-			siteContent: { ...siteContent },
-			cardStyles: { ...cardStyles }
-		}
-	}
+    // 💡 关键修改：增加这一行判断
+    if (typeof window === 'undefined') {
+        return {
+            siteContent: { ...siteContent },
+            cardStyles: { ...cardStyles }
+        }
+    }
+
+    try {
+        const savedSiteContent = localStorage.getItem('siteContent')
+        const savedCardStyles = localStorage.getItem('cardStyles')
+
+        return {
+            siteContent: savedSiteContent ? JSON.parse(savedSiteContent) : { ...siteContent },
+            cardStyles: savedCardStyles ? JSON.parse(savedCardStyles) : { ...cardStyles }
+        }
+    } catch (error) {
+        console.error('Failed to load config from localStorage:', error)
+        return {
+            siteContent: { ...siteContent },
+            cardStyles: { ...cardStyles }
+        }
+    }
 }
 
 // 保存配置到localStorage

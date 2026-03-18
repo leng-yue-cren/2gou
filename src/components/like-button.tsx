@@ -64,15 +64,25 @@ export default function LikeButton({ slug = 'yysuni', delay, className }: LikeBu
 		setTimeout(() => setParticles([]), 1000)
 
 		try {
-			const url = `${ENDPOINT}?slug=${encodeURIComponent(slug)}`;
-			const res = await fetch(url, { method: 'POST' });
-			const data = await res.json().catch(() => ({}))
-			if (data.reason == 'rate_limited') toast('谢谢啦😘，今天已经不能再点赞啦💕')
-			const value = typeof data?.count === 'number' ? data.count : (fetchedCount ?? 0) + 1
-			await mutate(value, { revalidate: false })
-		} catch {
-			// ignore
-		}
+    const url = `${ENDPOINT}?slug=${encodeURIComponent(slug)}`;
+    const res = await fetch(url, { method: 'POST' });
+    const data = await res.json().catch(() => ({}));
+    
+    // 💡 只有当后端返回限流原因时，才弹出提示
+    if (data.reason === 'rate_limited') {
+        toast('谢谢啦😘，今天给这篇点的赞够多啦💕');
+        // 如果被限流了，把刚才前端由于“乐观更新”加上的状态改回去（可选）
+        setLiked(true); 
+        return;
+    }
+    
+    // 正常更新点赞数
+    const value = typeof data?.count === 'number' ? data.count : (fetchedCount ?? 0) + 1;
+    await mutate(value, { revalidate: false });
+
+} catch (error) {
+    // 忽略错误
+}
 	}, [slug, fetchedCount, mutate]);
 
 	const count = typeof fetchedCount === 'number' ? fetchedCount : null

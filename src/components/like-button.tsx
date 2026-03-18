@@ -13,7 +13,7 @@ type LikeButtonProps = {
 	delay?: number
 }
 
-const ENDPOINT = 'const ENDPOINT = '/api/like'
+const ENDPOINT = '/api/like';
 
 export default function LikeButton({ slug = 'yysuni', delay, className }: LikeButtonProps) {
 	slug = BLOG_SLUG_KEY + slug
@@ -48,9 +48,9 @@ export default function LikeButton({ slug = 'yysuni', delay, className }: LikeBu
 	})
 
 	const handleLike = useCallback(async () => {
-		if (!slug) return
-		setLiked(true)
-		setJustLiked(true)
+		if (!slug) return;
+		setLiked(true);
+		setJustLiked(true);
 
 		// Create particle effects
 		const newParticles = Array.from({ length: 6 }, (_, i) => ({
@@ -64,8 +64,8 @@ export default function LikeButton({ slug = 'yysuni', delay, className }: LikeBu
 		setTimeout(() => setParticles([]), 1000)
 
 		try {
-			const url = `${ENDPOINT}?slug=${encodeURIComponent(slug)}`
-			const res = await fetch(url, { method: 'POST' })
+			const url = `${ENDPOINT}?slug=${encodeURIComponent(slug)}`;
+			const res = await fetch(url, { method: 'POST' });
 			const data = await res.json().catch(() => ({}))
 			if (data.reason == 'rate_limited') toast('谢谢啦😘，今天已经不能再点赞啦💕')
 			const value = typeof data?.count === 'number' ? data.count : (fetchedCount ?? 0) + 1
@@ -73,7 +73,7 @@ export default function LikeButton({ slug = 'yysuni', delay, className }: LikeBu
 		} catch {
 			// ignore
 		}
-	}, [slug, fetchedCount, mutate])
+	}, [slug, fetchedCount, mutate]);
 
 	const count = typeof fetchedCount === 'number' ? fetchedCount : null
 
